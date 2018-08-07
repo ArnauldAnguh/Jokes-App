@@ -1,0 +1,36 @@
+body .container-fluid{
+	margin: 0px;
+	padding: 0px
+	background-color: red;
+	/*background-image: url(../img/capture6.png);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#chatbox {
+	width: 40%;
+	height: 450px;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+#myChatform {
+	text-align: center;
+
+}
+input[type = "text"] {
+	width: 40%;
+	padding: 2px;
+	margin: 3px;
+
+}
+
+#myChatform textarea {
+	width: 40%;
+	padding: 2px;
+	margin: 3px;
+	resize: none;
+}
+
+#sendsms {
+	width: 40%;
+}
