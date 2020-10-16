@@ -1,0 +1,451 @@
+  <style>
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+  body{
+    width: 100%;
+    background:#FBF8F8;
+  }
+  textarea:focus{
+  }
+
+  .bigtop{
+    color: lightgrey;
+    background-color: #E1E1E1;
+    margin: 0px;
+    height: 30px;
+    margin-bottom: 15px; 
+  }
+  .bigtop a{
+    display: inline-block;
+    padding: 3px;
+    margin: 3px;
+    text-align: center;
+    height: 25px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    background-color: lightgrey;
+
+  }
+.error-message {
+    padding: 7px 10px;
+    background: #fff1f2;
+    border: #ffd5da 1px solid;
+    color: #d6001c;
+    border-radius: 4px;
+}
+.success-message {
+    padding: 7px 10px;
+    background: #cae0c4;
+    border: #c3d0b5 1px solid;
+    color: #027506;
+    border-radius: 4px;
+}
+
+.btnRegister {
+    padding: 10px 30px;
+    background-color: #3367b2;
+    border: 0;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+.message {color: #333;padding: 2px 10px;background: #E1F9D9;border: #DBECD5 1px solid;}
+
+
+ /* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-image: url(img/fast.jpg); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 32px;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+ /*second navigation*/
+.icon-bar {
+    width: 23%;
+    height: 50px;
+    text-align: center;
+/*    background-color: #555;
+*/  
+    float: right;
+    margin: 0px 0px 0px 8px;
+}
+
+.icon-bar a {
+    width: 20%;
+    padding: 1px;
+    float: left;
+    transition: all 0.3s ease;
+    color: #EAF9B5;
+    font-size: 34px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+    color: white;
+}
+
+.active {
+    color: black;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+#user{
+    width:244px;
+    height:110px;
+    margin-top: 0px;
+    background-color: white;
+    border: 1px solid lightgray; 
+    padding:5px 7px;
+}
+#plu{ 
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+   
+}
+#plu:active{ 
+    color: blue;
+    border: 1px solid lightgray;
+      
+}
+
+#tab {
+
+    width:245px;
+    padding:2px 0px;
+    margin-top:4px;
+    border: none;
+    background-color: ;
+
+}
+#tab a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 5px;
+   
+}
+#tab a i {
+    float: right;
+}
+#tab a img{
+    border-radius: 20px;
+}
+
+#tab:hover {
+        overflow-y:auto;
+      
+}
+#tab a:hover i{
+
+   color: red;
+    
+}
+#cat{
+    border: 1px solid lightblue;
+    padding: 5px;
+    width: 215px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 3px 3px 5px lightblue;
+    background-color: #FFFFD2;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+#lap:hover{
+    background-color: lightblue;
+    color: brown;
+}
+
+/*social media*/
+
+#social li{
+    display: block;
+}
+#social li a{
+    display: block;
+    padding: 3px;
+    border-bottom:1px solid #333;
+    color: white;
+    border-left:1px solid #fff;
+    font-size: 15px;
+    text-decoration: none; 
+}
+#social li a:hover{
+    color: #FFFF00;
+    border-left: 2px dotted #fff;
+    padding: 2px;
+    font-size: 15px;
+}
+#social li img{
+    border-radius: 5px; 
+    }
+    #dt{
+        background-color: white;
+    }
+   
+#dt:hover{
+    background-color: ;
+}
+
+
+
+/*edit display*/
+
+.btn12{
+    display: block;
+    border-radius: 4px;
+    text-transform: lowercase; 
+    cursor: pointer;
+}
+.popup{
+    width: 70%;
+    height: 300px;
+    background-color: lightblue;
+    border-radius: 4px;
+    display: none;
+    z-index: 1000;
+    margin: 0px auto;
+    position: relative; 
+}
+#paster {
+    font-size: 20px;
+    line-height: 500px;
+    padding: 10px;
+}
+#cover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    display: none;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+#close{
+    width: 25px;
+    height: 25px;
+    color: #EF5350;
+    cursor: pointer;
+    font-size: 25px;
+    float: right;
+    line-height: 25px;
+    border-radius: 50%;
+    border: 2px solid #EF9A9A;
+
+}
+#opt a:first-child{
+    float: left;
+  padding: 10px;
+    width: 20%;
+    background-color: #2ECC71;
+}
+
+#opt a:last-child{
+    float: right;
+  padding: 10px;
+    width: 20%;
+    background-color: #F44336;
+}
+#opt{
+    position: absolute;
+
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+}
+#opt a {
+text-transform: lowercase;
+text-decoration: none;
+color: #fff;
+text-align: center; 
+padding: 7px 0px;
+
+}
+.inactive button{
+    background-color: grey;
+    border: none;
+}
+.inactive button:active{
+    background-color: grey;
+}
+
+#drop ul{
+    background-color: white;
+    width: 10%;
+}
+#drop ul li a{
+    list-style-type: none;
+    display: block;
+    padding: 2px;
+    color: lightgrey;
+    width: 100%;
+    font-size: 18px;
+    margin: 0px;
+}
+#drop ul li a:hover{
+    background-color: yellow;
+    color: black;
+}
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 670px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.panel.show {
+    display: block !important;
+}
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+#people{
+  border-color: white;
+
+}
+#people img {
+  box-shadow: 0px 6px 4px lightgray;
+  border-color: white;
+  border-radius: 4px;
+}
+#but{
+    width: 150px;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+#but:hover{
+    background: white;
+}
+.Anguh form i{
+    float: left;
+    color: grey;
+}
